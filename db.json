@@ -1,0 +1,46 @@
+{
+  "posts": [
+    {
+      "name": "subhan Update",
+      "email": "subhanupdate@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "batman khan Kaka",
+      "email": "batmankhan@gmail.com",
+      "id": 5
+    }
+  ],
+  "education_data": [
+    {
+      "degree": "HSSC",
+      "degreeTitle": "Secondary School Certificate",
+      "decDate": "2022-08-11",
+      "board": "AKL PG Collage Matta",
+      "obtMarks": "826",
+      "totalMarks": "1100",
+      "grade": "A",
+      "id": 3
+    },
+    {
+      "degree": "BS",
+      "degreeTitle": "BS Computer Science",
+      "decDate": "2021-10-29",
+      "board": "UET Peshwar",
+      "obtMarks": "3.37",
+      "totalMarks": "4.00",
+      "grade": "A",
+      "id": 4
+    },
+    {
+      "degree": "HSSC",
+      "degreeTitle": "",
+      "decDate": "",
+      "board": "",
+      "obtMarks": "",
+      "totalMarks": "",
+      "grade": "",
+      "id": 5
+    }
+  ]
+}
