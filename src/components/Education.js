@@ -12,12 +12,23 @@ function Education() {
   const[result,setResult]=useState([]);
 
   useEffect(() => {
-    getUsers();
+    getUsers(); 
+    console.log("useEffect pass called callled");
+    console.log("useEffect pass called callled & pass = ", pass);
+    // setPass(!pass)
+
+    // for(let i=0;i<1;i++){
+    //   setPass(!pass)
+    // }
+
+    setPass(true);
   }, [pass]);
+
+ 
 
   // useEffect(() => {
   //   getUsers();
-  // }, [saveData]);
+  // }, [pass]);
 
 
 
@@ -53,6 +64,8 @@ function Education() {
     console.log(result.data);
     setResult(result.data);
 
+    console.log("get users loaded");
+
   } 
   catch (error) {
     console.log("something is wrong from get users");
@@ -63,7 +76,10 @@ function Education() {
 // const reload=()=>window.location.reload();
 
 
-
+function parentfun(data){
+  console.warn("edu paren fun called "+data);
+  getUsers();
+}
 
 
   return (
@@ -77,7 +93,7 @@ function Education() {
           <h2>Education</h2>
           {/* <button  className='btn' style={{backgroundColor:'#00897b', color: 'white'}}>ADDING EDUCATION <span className='modal_btn'><ion-icon name="add-circle"></ion-icon></span></button> */}
           
-          <ModalEducation setPass={setPass}/>
+          <ModalEducation setPass={setPass} pass={pass} parentfun={parentfun}/>
           
           <table className="table">
           
@@ -95,7 +111,7 @@ function Education() {
             </tr>
             {
                 
-               result.map((result_show, i) => {
+               result?.map((result_show, i) => {
                 console.log("edu body loaded");
                 return(
             <tr key={i}>

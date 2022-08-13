@@ -6,10 +6,12 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
-import Education from './Education';
 
 
-function ModalEducation({setPass}) {
+
+// function ModalEducation({setPass},{pass}) {
+function ModalEducation(props) {
+
 
     const [show, setShow] = useState(false);
 
@@ -26,7 +28,11 @@ function ModalEducation({setPass}) {
     const [totalMarks,setTotalMarks]=useState("");
     const [grade,setGrade]=useState("");
 
-  
+    const[data,setData]=useState(true);
+    // const[pass,setPass]=useState(props.pass);
+
+  // console.log("pass value = ",props.pass);
+    // console.warn("set pass value = "+props.setPass);
 
 
     const saveData=async ()=>{
@@ -41,7 +47,9 @@ function ModalEducation({setPass}) {
         });
 
         if (result){
-          toast.success('User Added Successfully ', {
+         
+
+          toast.success('Education Added Successfully ', {
         position: "top-right",
         autoClose: 4000,
         hideProgressBar: true,
@@ -51,11 +59,19 @@ function ModalEducation({setPass}) {
         progress: undefined,
         });
 
-        setPass(false);
+        
+        // props.data(data)
+        
+        // setPass(true);
+
+        props.setPass(false);
+        // props.parentfun(setPass(!pass));
+        
+      
         
         }
 
-        navigate('/education');
+        // navigate('/education');
         // navigate('/redirect_edu');
         handleClose();
 
@@ -71,6 +87,8 @@ function ModalEducation({setPass}) {
          {/* <Button variant="primary" onClick={handleShow}> */} 
          {/* Launch demo modal
       </Button> */}
+
+{/* <button onClick={() => props.data(data)}>button </button> */}
 
          <button className='btn'  onClick={handleShow} style={{backgroundColor:'#00897b', color: 'white'}}>ADDING EDUCATION <span className='modal_btn'><ion-icon name="add-circle"></ion-icon></span></button>
      

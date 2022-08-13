@@ -1,7 +1,7 @@
 {
   "posts": [
     {
-      "name": "subhan Update",
+      "name": "subhan kaka Update kaka",
       "email": "subhanupdate@gmail.com",
       "id": 1
     },
@@ -31,16 +31,6 @@
       "totalMarks": "4.00",
       "grade": "A",
       "id": 4
-    },
-    {
-      "degree": "HSSC",
-      "degreeTitle": "",
-      "decDate": "",
-      "board": "",
-      "obtMarks": "",
-      "totalMarks": "",
-      "grade": "",
-      "id": 5
     }
   ]
 }
