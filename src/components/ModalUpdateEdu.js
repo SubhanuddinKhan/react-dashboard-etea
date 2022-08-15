@@ -9,14 +9,16 @@ import {
   DropdownButton,
   Form,
 } from "react-bootstrap";
+
+
 import axios from "axios";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 
-// function ModalEducation({setPass},{pass}) {
-function ModalEducation(props) {
+// function ModalUpdateEdu({setPass},{pass}) {
+function ModalUpdateEdu(props) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -31,8 +33,23 @@ function ModalEducation(props) {
   const [obtMarks, setObtMarks] = useState("");
   const [totalMarks, setTotalMarks] = useState("");
   const [grade, setGrade] = useState("");
-
   const [data, setData] = useState(true);
+
+//   useEffect(() => {
+//     getUsers();
+//   }, []);
+
+//   const getEducationData = async () => {
+//     try {
+//       const result = await axios.get(`http://localhost:8000/education/${id}`);
+//       console.log(result.data);
+//       // setResult(result.data);
+//       setName(result.data.name);
+//       setEmail(result.data.email);
+//     } catch (error) {
+//       console.log("something is wrong from get users");
+//     }
+//   };
 
   const saveData = async () => {
     console.log(
@@ -235,4 +252,4 @@ function ModalEducation(props) {
   );
 }
 
-export default ModalEducation;
+export default ModalUpdateEdu;

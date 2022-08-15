@@ -11,6 +11,7 @@ import UpdateUser from "./UpdateUser";
 import Education from './Education';
 import Experience from './Experience';
 import Redirect from './Redirect';
+import ModalUpdateEdu from './ModalUpdateEdu';
 
 
 
@@ -138,6 +139,7 @@ function Dashboard() {
         <Route exact path="/education" element={<Education />} />
         <Route exact path="/experience" element={<Experience />} />
         <Route exact path='/redirect_edu' element={<Redirect />} />
+        <Route exact path="/update_edu_data/:id" element={<ModalUpdateEdu />} />
         </Routes>
 
       </div>

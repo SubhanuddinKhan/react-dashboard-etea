@@ -13,6 +13,7 @@ import Dashboard from "./components/Dashboard";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import TestP from "./components/TestP";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
 
       
       <BrowserRouter>
+      {/* <TestP /> */}
       <Dashboard />
      
       </BrowserRouter>

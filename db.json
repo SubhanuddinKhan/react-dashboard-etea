@@ -15,8 +15,7 @@
     {
       "degree": "HSSC",
       "degreeTitle": "Secondary School Certificate",
-      "decDate": "2022-08-11",
-      "board": "AKL PG Collage Matta",
+      "board": "ApL PG Collage Matta",
       "obtMarks": "826",
       "totalMarks": "1100",
       "grade": "A",
@@ -24,12 +23,11 @@
     },
     {
       "degree": "BS",
-      "degreeTitle": "BS Computer Science",
-      "decDate": "2021-10-29",
-      "board": "UET Peshwar",
-      "obtMarks": "3.37",
-      "totalMarks": "4.00",
-      "grade": "A",
+      "degreeTitle": "kskdfhkj",
+      "board": "Swat",
+      "obtMarks": "ksjdfhk",
+      "totalMarks": "jkh",
+      "grade": "B",
       "id": 4
     }
   ]
