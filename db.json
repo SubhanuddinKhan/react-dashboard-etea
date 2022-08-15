@@ -15,20 +15,40 @@
     {
       "degree": "HSSC",
       "degreeTitle": "Secondary School Certificate",
-      "board": "ApL PG Collage Matta",
-      "obtMarks": "826",
+      "decDate": "2022-08-14",
+      "board": "AKL PG Collage Matta Swat",
+      "obtMarks": "827",
       "totalMarks": "1100",
       "grade": "A",
       "id": 3
     },
     {
       "degree": "BS",
-      "degreeTitle": "kskdfhkj",
-      "board": "Swat",
-      "obtMarks": "ksjdfhk",
-      "totalMarks": "jkh",
-      "grade": "B",
+      "degreeTitle": "BS Computer Science",
+      "decDate": "2022-08-18",
+      "board": "UET Peshawar",
+      "obtMarks": "3.37",
+      "totalMarks": "4.00",
+      "grade": "A",
       "id": 4
+    }
+  ],
+  "experience_data": [
+    {
+      "department": "CS & IT",
+      "company": "KarakoramX Technologies PVT LTD",
+      "designation": "React Developer",
+      "startDuration": "2021-07-01",
+      "endDuration": "2022-08-16",
+      "id": 1
+    },
+    {
+      "department": "Computer Science",
+      "company": "Lepus Analytics",
+      "designation": "Wordpress Developer",
+      "startDuration": "2022-08-01",
+      "endDuration": "2022-08-15",
+      "id": 2
     }
   ]
 }

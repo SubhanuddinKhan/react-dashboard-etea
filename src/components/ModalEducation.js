@@ -115,6 +115,7 @@ function ModalEducation(props) {
                 <Form.Select
                   value={degree}
                   onChange={(e) => setDegree(e.target.value)}
+                  
                 >
                   <option>Open this select menu</option>
                   <option value="SSC">SSC</option>

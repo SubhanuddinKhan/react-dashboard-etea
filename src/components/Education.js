@@ -106,7 +106,7 @@ function Education() {
       setId(result_update.data.id);
       setDegree(result_update.data.degree);
       setDegreeTitle(result_update.data.degreeTitle);
-      setDecDate(result_update.data.date);
+      setDecDate(result_update.data.decDate);
       setBoard(result_update.data.board);
       setObtMarks(result_update.data.obtMarks);
       setTotalMarks(result_update.data.totalMarks);
@@ -149,7 +149,7 @@ function Education() {
       // });
 
     if (result_update) {
-      toast.success("Education Added Successfully ", {
+      toast.success("Education Updated Successfully ", {
         position: "top-right",
         autoClose: 4000,
         hideProgressBar: true,
@@ -161,9 +161,10 @@ function Education() {
 
      
     }
-    // getUsers();
-//  handleClose();
-setPass(true);
+    
+ handleClose();
+ getUsers();
+// setPass(true);
 
   }
 
@@ -184,13 +185,14 @@ setPass(true);
               setPass={setPass}
             />
 
+        <div className="table-responsive">
             <table className="table">
               <tbody>
                 <tr>
                   <th>S.No</th>
-                  <th>Degree/Certificate</th>
-                  <th>Degree/Certificate Title</th>
-                  <th>Board/University</th>
+                  <th>Degree/ Certificate</th>
+                  <th>Degree/ Certificate Title</th>
+                  <th>Board/ University</th>
                   <th>Result Declaration Date</th>
                   <th>Obtained Marks/GPA</th>
                   <th>Total Marks/GPA</th>
@@ -229,22 +231,13 @@ setPass(true);
                 })}
               </tbody>
             </table>
-
+        </div>
 
 
 
             {/* Modal Update Start  */}
 
-            <button
-              className="btn"
-              onClick={handleShow}
-              style={{ backgroundColor: "#00897b", color: "white" }}
-            >
-              update EDUCATION{" "}
-              <span className="modal_btn">
-                <ion-icon name="add-circle"></ion-icon>
-              </span>
-            </button>
+           
 
             {/* <Modal show={show} onHide={handleClose} size="lg" onExit={reload}> */}
             <Modal show={show} onHide={handleClose} size="lg">
@@ -355,23 +348,12 @@ setPass(true);
                         value={grade}
                         onChange={(e) => setGrade(e.target.value)}
                       >
-                        <option>Open this select menu</option>
+                        <option value="">Open this select menu</option>
                         <option value="A">A</option>
                         <option value="B">B</option>
                         <option value="C">C</option>
                       </Form.Select>
-                    </Col>
-
-                    <Col xs={4} md={3}>
-                      <Form.Control
-                        placeholder="Board/University"
-                        aria-label="Board/University"
-                        aria-describedby="basic-addon1"
-                        value={id}
-                        
-                        
-                      />
-                    </Col>
+                    </Col>              
 
 
                   </Row>
