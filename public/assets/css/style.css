@@ -321,6 +321,34 @@ body{
     border-radius: 20px;
 }
 
+.details_dashboard_apply {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-gap: 30px;
+    /* margin-top: 10px; */
+}
+
+.details_dashboard_apply .componentsBox {
+    position: relative;
+    display: grid;
+    min-height: 200px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 10px;
+}
+
+.details_dashboard_apply .componentsBox .table__data .input-group-text{
+    color: var(--white);
+    background-color: #00C851;
+    width: 60%;
+    justify-content: center;
+    border-radius: 5px;
+}
+
 .modal_btn ion-icon{
     padding: 0;
     /* margin: 0; */
@@ -661,6 +689,11 @@ body{
     margin-left: 0px;
 }
 
+.table__data table Button {
+    background-color: var(--blue);
+    font-weight: bold;
+}
+
 .table__data table span ion-icon {
     font-size: 1.3em;
     padding: 5px 5px;
@@ -688,6 +721,13 @@ body{
     background: var(--white);
     /* color: var(--blue); */
     border-radius: 19px;
+}
+
+.table__data table tr:hover Button{
+    background: var(--white);
+    color: var(--blue);
+    font-weight: bold;
+    /* border-radius: 19px; */
 }
 
 .table__data td {

@@ -50,5 +50,63 @@
       "endDuration": "2022-08-15",
       "id": 2
     }
+  ],
+  "posts_provider": [
+    {
+      "name": "Swat Board Jobs",
+      "postName": "Computer Operator",
+      "expiryDate": "2022-08-15",
+      "id": 23
+    }
+  ],
+  "posts_data": [
+    {
+      "name": "Computer Operator",
+      "post_pId": 23,
+      "id": 1
+    },
+    {
+      "name": "Data Entry",
+      "post_pId": 23,
+      "id": 2
+    },
+    {
+      "name": "Stenotypist",
+      "post_pId": 23,
+      "id": 3
+    },
+    {
+      "name": "Stenotypist",
+      "post_pId": 24,
+      "id": 4
+    },
+    {
+      "name": "Clerk",
+      "post_pId": 23,
+      "id": 5
+    }
+  ],
+  "posts_applied": [
+    {
+      "name": "Computer Operator",
+      "expiryDate": "2022-08-15",
+      "userId": 23,
+      "id": 1
+    },
+    {
+      "name": "Clerk",
+      "userId": 23,
+      "id": 16
+    },
+    {
+      "name": "Clerk",
+      "userId": 23,
+      "id": 17
+    },
+    {
+      "name": "Stenotypist",
+      "userId": 23,
+      "id": 18
+    }
   ]
 }

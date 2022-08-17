@@ -12,6 +12,7 @@ import Education from './Education';
 import Experience from './Experience';
 import Redirect from './Redirect';
 import ModalUpdateEdu from './ModalUpdateEdu';
+import Apply from './Apply';
 
 
 
@@ -91,10 +92,10 @@ function Dashboard() {
         </Link>
       </li>
       <li>
-        <a href>
+        <Link to="/apply">
           <span className="icon"><ion-icon name="newspaper-outline" /></span>
           <span className="title">Posts</span>
-        </a>
+        </Link>
       </li>
       <li>
         <a href>
@@ -138,8 +139,7 @@ function Dashboard() {
         <Route exact path="/users" element={<UsersList />} />
         <Route exact path="/education" element={<Education />} />
         <Route exact path="/experience" element={<Experience />} />
-        <Route exact path='/redirect_edu' element={<Redirect />} />
-        <Route exact path="/update_edu_data/:id" element={<ModalUpdateEdu />} />
+        <Route exact path="/apply" element={<Apply />} />
         </Routes>
 
       </div>
