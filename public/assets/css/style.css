@@ -765,6 +765,22 @@ body{
 }
 
 
+/* Profile page Style  */
+
+.table__data__profile .row{
+    min-height: 100px;
+}
+
+.table__data__profile Button {
+    background-color: var(--blue);
+    font-weight: bold;
+}
+
+.table__data__profile Button:hover {
+    background-color: #3db166;
+    font-weight: bold;
+}
+
 
 
 

@@ -92,21 +92,6 @@
       "expiryDate": "2022-08-15",
       "userId": 23,
       "id": 1
-    },
-    {
-      "name": "Clerk",
-      "userId": 23,
-      "id": 16
-    },
-    {
-      "name": "Clerk",
-      "userId": 23,
-      "id": 17
-    },
-    {
-      "name": "Stenotypist",
-      "userId": 23,
-      "id": 18
     }
   ]
 }
