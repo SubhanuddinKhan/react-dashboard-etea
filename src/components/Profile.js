@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import {
     Modal,
     Button,
@@ -10,15 +10,138 @@ import {
     InputGroup,
   } from "react-bootstrap";
 
+  import axios from 'axios';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 function Profile() {
 
-    const [degree, setDegree] = useState("");
-    const [degreeTitle, setDegreeTitle] = useState("");
-    const [decDate, setDecDate] = useState("");
-    const [board, setBoard] = useState("");
-    const [obtMarks, setObtMarks] = useState("");
-    const [totalMarks, setTotalMarks] = useState("");
-    const [grade, setGrade] = useState("");
+  const[result,setResult] = useState("");
+
+    const [name, setName] = useState("");
+    const [fName, setFName] = useState("");
+    const [cnic, setCnic] = useState("");
+    const [email, setEmail] = useState("");
+    const [gender, setGender] = useState("");
+    const [religious, setReligious] = useState("");
+    const [poAddress, setPoAddress] = useState("");
+    const [paAddress, setPaAddress] = useState("");
+    const [mobNo,setMobNo] = useState("");
+    const [alNo,setAlNo] = useState("");
+    const [dob,setDob] = useState("");
+    const [domicile,setDomicile] = useState("");
+    const [zone,setZone] = useState("");
+    const [disability,setDisability] = useState("");
+    const [ageRel,setAgeRel] = useState("");
+    const [curOccupation,setCurOccupation] = useState("");
+    const [highQualification,setHighQualification] = useState("");
+
+    // const [id,setId] = useState(1);
+    let id=1;
+
+
+    useEffect(()=>{
+      editGetUsers();
+    },[])
+
+     // Get Profile Data
+     const editGetUsers = async () => {
+      try {
+        // setShow(true);
+        // console.warn("edit get user id = ", id);
+        const result = await axios.get(`http://localhost:8000/profiles/${id}`);
+        // console.log(result.data);
+        setResult(result.data);
+        // setId(result.data.id);
+        setName(result.data.name);
+        setFName(result.data.fName);
+        setCnic(result.data.cnic);
+        setEmail(result.data.email);
+        setGender(result.data.gender);
+        setReligious(result.data.religious);
+        setPoAddress(result.data.poAddress);
+        setPaAddress(result.data.paAddress);
+        setMobNo(result.data.mobNo);
+        setAlNo(result.data.alNo);
+        setDob(result.data.dob);
+        setDomicile(result.data.domicile);
+        setZone(result.data.zone);
+        setDisability(result.data.disability);
+        setAgeRel(result.data.ageRel);
+        setCurOccupation(result.data.curOccupation);
+        setHighQualification(result.data.highQualification);
+  
+      } catch (error) {
+        console.log("something is wrong from get users");
+      }
+    };
+
+
+      // Edit Profile Data
+  const updateProfile = async () => {
+    // console.log("id Update = ",id)
+    const result_update = await axios.put(`http://localhost:8000/profiles/${id}`, {
+      name: name,fName: fName,cnic: cnic,email: email,gender: gender,religious: religious,
+          poAddress: poAddress,paAddress: paAddress,mobNo: mobNo,alNo: alNo,dob: dob,domicile: domicile,zone: zone,disability: disability,ageRel: ageRel,
+          curOccupation: curOccupation,highQualification: highQualification
+       
+      })
+      
+
+    if (result_update) {
+      toast.success("Profile Updated Successfully ", {
+        position: "top-right",
+        autoClose: 4000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+
+     
+    }
+
+    editGetUsers();
+
+
+  }
+     
+
+    // const collectData=async ()=>{
+    //   console.log(name,fName,cnic,email,gender,religious,
+    //     poAddress,paAddress,mobNo,alNo,dob,domicile,zone,disability,ageRel,
+    //     curOccupation,highQualification);
+
+    //   const result= axios
+    //   .post("http://localhost:8000/profiles", {
+    //     name,fName,cnic,email,gender,religious,
+    //     poAddress,paAddress,mobNo,alNo,dob,domicile,zone,disability,ageRel,
+    //     curOccupation,highQualification
+    //   });
+
+    //   if (result){
+    //     toast.success('User Added Successfully ', {
+    //   position: "top-right",
+    //   autoClose: 4000,
+    //   hideProgressBar: true,
+    //   closeOnClick: true,
+    //   pauseOnHover: true,
+    //   draggable: true,
+    //   progress: undefined,
+    //   });
+    //   }
+
+    // }
+    
+
+
+
+
+
 
   return (
     <>
@@ -37,30 +160,36 @@ function Profile() {
             <hr />
             <Row className="row">
               <Col xs={6} md={4}>
+                <label>Name </label>
               <Form.Control
                   placeholder="Name"
-                  aria-label="Degree/Certificate Title"
+                  aria-label="Name"
                   aria-describedby="basic-addon1"
-                  value={degreeTitle}
-                  onChange={(e) => setDegreeTitle(e.target.value)}
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  
                 />
               </Col>
               <Col xs={6} md={4}>
+                <label htmlFor="Father Name">Father Name</label>
               <Form.Control
                   placeholder="Father Name"
-                  aria-label="Degree/Certificate Title"
+                  aria-label="Father Name"
                   aria-describedby="basic-addon1"
-                  value={degreeTitle}
-                  onChange={(e) => setDegreeTitle(e.target.value)}
+                  value={fName}
+                  onChange={(e) => setFName(e.target.value)}
                 />
               </Col>
               <Col xs={6} md={4}>
+                <label htmlFor="CNIC">CNIC</label>
               <Form.Control
+              
                   placeholder="CNIC"
-                  aria-label="Degree/Certificate Title"
+                  aria-label="CNIC"
                   aria-describedby="basic-addon1"
-                  value={degreeTitle}
-                  onChange={(e) => setDegreeTitle(e.target.value)}
+                  value={cnic}
+                  onChange={(e) => setCnic(e.target.value)}
+                  disabled
                 />
               </Col>
             
@@ -68,31 +197,34 @@ function Profile() {
 
             <Row className="row">
             <Col xs={4} md={3}>
+              <label htmlFor="Email">Email</label>
                 <Form.Control
                   placeholder="Email"
-                  aria-label="Degree/Certificate Title"
+                  aria-label="Email"
                   aria-describedby="basic-addon1"
-                  value={degreeTitle}
-                  onChange={(e) => setDegreeTitle(e.target.value)}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </Col>
 
               <Col xs={6} md={4}>
+                <label htmlFor="Gender">Gender</label>
               <Form.Control
                   placeholder="Gender"
-                  aria-label="Degree/Certificate Title"
+                  aria-label="Gender"
                   aria-describedby="basic-addon1"
-                  value={degreeTitle}
-                  onChange={(e) => setDegreeTitle(e.target.value)}
+                  value={gender}
+                  onChange={(e) => setGender(e.target.value)}
                 />
               </Col>
               <Col xs={6} md={4}>
+                <label htmlFor="Religious">Religious</label>
               <Form.Control
                   placeholder="Religious"
-                  aria-label="Degree/Certificate Title"
+                  aria-label="Religious"
                   aria-describedby="basic-addon1"
-                  value={degreeTitle}
-                  onChange={(e) => setDegreeTitle(e.target.value)}
+                  value={religious}
+                  onChange={(e) => setReligious(e.target.value)}
                 />
               </Col>
              
@@ -100,21 +232,23 @@ function Profile() {
 
             <Row className="row">
             <Col xs={12} md={6}>
+              <label htmlFor="Postal Address">Postal Address</label>
                 <Form.Control
                   placeholder="Postal Address"
-                  aria-label="Board/University"
+                  aria-label="Postal Address"
                   aria-describedby="basic-addon1"
-                  value={board}
-                  onChange={(e) => setBoard(e.target.value)}
+                  value={poAddress}
+                  onChange={(e) => setPoAddress(e.target.value)}
                 />
               </Col>
               <Col xs={12} md={6}>
+                <label htmlFor="Parmanent Address">Parmanent Address</label>
                 <Form.Control
                   placeholder="Parmanent Address"
-                  aria-label="Board/University"
+                  aria-label="Parmanent Address"
                   aria-describedby="basic-addon1"
-                  value={board}
-                  onChange={(e) => setBoard(e.target.value)}
+                  value={paAddress}
+                  onChange={(e) => setPaAddress(e.target.value)}
                 />
               </Col>
              
@@ -122,32 +256,35 @@ function Profile() {
 
             <Row className="row">
             <Col xs={6} md={4}>
+              <label htmlFor="Mobile Number">Mobile Number</label>
                 <Form.Control
                   placeholder="Mobile Number"
-                  aria-label="Marks/GPA"
+                  aria-label="Mobile Number"
                   aria-describedby="basic-addon1"
-                  value={obtMarks}
-                  onChange={(e) => setObtMarks(e.target.value)}
+                  value={mobNo}
+                  onChange={(e) => setMobNo(e.target.value)}
                 />
               </Col>
              
               <Col xs={6} md={4}>
+                <label htmlFor="Alternative Number">Alternative Number</label>
                 <Form.Control
                   placeholder="Alternative Number"
-                  aria-label="Total Marks/GPA"
+                  aria-label="Alternative Number"
                   aria-describedby="basic-addon1"
-                  value={totalMarks}
-                  onChange={(e) => setTotalMarks(e.target.value)}
+                  value={alNo}
+                  onChange={(e) => setAlNo(e.target.value)}
                 />
               </Col>
 
               <Col xs={6} md={4}>
+                <label htmlFor="DOB">DOB</label>
               <Form.Control
                   placeholder="DOB"
-                  aria-label="Total Marks/GPA"
+                  aria-label="DOB"
                   aria-describedby="basic-addon1"
-                  value={totalMarks}
-                  onChange={(e) => setTotalMarks(e.target.value)}
+                  value={dob}
+                  onChange={(e) => setDob(e.target.value)}
                 />
               </Col>
 
@@ -156,32 +293,37 @@ function Profile() {
 
             <Row>
             <Col xs={6} md={4}>
+              <label htmlFor="Domicile">Domicile</label>
             <Form.Control
                   placeholder="Domicile"
-                  aria-label="Degree/Certificate Title"
+                  aria-label="Domicile"
                   aria-describedby="basic-addon1"
-                  value={degreeTitle}
-                  onChange={(e) => setDegreeTitle(e.target.value)}
+                  value={domicile}
+                  onChange={(e) => setDomicile(e.target.value)}
                 />
               </Col>
               
               <Col xs={6} md={4}>
+                <label>Zone</label>
               <Form.Control
                   placeholder="Zone"
-                  aria-label="Degree/Certificate Title"
+                  aria-label="Zone"
                   aria-describedby="basic-addon1"
-                  value={degreeTitle}
-                  onChange={(e) => setDegreeTitle(e.target.value)}
+                  value={zone}
+                  onChange={(e) => setZone(e.target.value)}
                 />
               </Col>
 
               <Col xs={6} md={4}>
-              {/* <Form.Label htmlFor="basic-url">Your vanity URL</Form.Label> */}
+              <label htmlFor="Disability">Disability</label>
       <InputGroup className="mb-3">
-        <InputGroup.Text id="basic-addon3">
+        {/* <InputGroup.Text id="basic-addon3">
           Disability
-        </InputGroup.Text>
-        <Form.Control id="basic-url" aria-describedby="basic-addon3" />
+        </InputGroup.Text> */}
+        <Form.Control id="basic-url" aria-describedby="basic-addon3"
+        value={disability}
+        onChange={(e) => setDisability(e.target.value)}
+         />
       </InputGroup>
       </Col>
             </Row>
@@ -193,7 +335,10 @@ function Profile() {
         {/* <InputGroup.Text id="basic-addon3">
           https://example.com/users/
         </InputGroup.Text> */}
-        <Form.Control id="basic-url" aria-describedby="basic-addon3" />
+        <Form.Control id="basic-url" aria-describedby="basic-addon3"
+        value={ageRel}
+        onChange={(e) => setAgeRel(e.target.value)}
+         />
       </InputGroup>
                 </Col>
 
@@ -203,7 +348,10 @@ function Profile() {
         {/* <InputGroup.Text id="basic-addon3">
           https://example.com/users/
         </InputGroup.Text> */}
-        <Form.Control id="basic-url" aria-describedby="basic-addon3" />
+        <Form.Control id="basic-url" aria-describedby="basic-addon3"
+        value={curOccupation}
+        onChange={(e) => setCurOccupation(e.target.value)}
+         />
       </InputGroup>
                 </Col>
 
@@ -213,14 +361,17 @@ function Profile() {
         {/* <InputGroup.Text id="basic-addon3">
           https://example.com/users/
         </InputGroup.Text> */}
-        <Form.Control id="basic-url" aria-describedby="basic-addon3" />
+        <Form.Control id="basic-url" aria-describedby="basic-addon3"
+        value={highQualification}
+        onChange={(e) => setHighQualification(e.target.value)}
+         />
       </InputGroup>
                 </Col>
             </Row>
 
             <Row>
                 <Col xs={12} md={12}>
-                <Button className='w-100'>UPDATE PROFILE</Button>
+                <Button className='w-100' onClick={updateProfile}>UPDATE PROFILE</Button>
                 </Col>
             </Row>
           </Container>

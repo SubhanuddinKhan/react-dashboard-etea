@@ -111,8 +111,6 @@ function Experience() {
 
 
   // Edit Experience Data
-
-
   const updateExperience = async () => {
     console.log("update Experience ",
       department,

@@ -93,5 +93,27 @@
       "userId": 23,
       "id": 1
     }
+  ],
+  "profiles": [
+    {
+      "name": "Subhan Uddin",
+      "fName": "Salahuddin",
+      "cnic": "15601-7843948-1",
+      "email": "subhanuddinkhan@gmail.com",
+      "gender": "male",
+      "religious": "Muslim",
+      "poAddress": "Village bazkhela P/O Durushkhela Tehsil Matta District Swat",
+      "paAddress": "Village bazkhela P/O Durushkhela Tehsil Matta District Swat",
+      "mobNo": "+923139157019",
+      "alNo": "03219092926",
+      "dob": "1999-02-01",
+      "domicile": "Swat",
+      "zone": "3",
+      "disability": "None",
+      "ageRel": "No",
+      "curOccupation": "PST (BPS - 12)",
+      "highQualification": "Bachelor",
+      "id": 1
+    }
   ]
 }
