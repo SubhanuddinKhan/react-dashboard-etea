@@ -1,7 +1,7 @@
 {
   "posts": [
     {
-      "name": "subhan kaka Update kaka",
+      "name": "subhan kaka Update",
       "email": "subhanupdate@gmail.com",
       "id": 1
     },
@@ -92,11 +92,16 @@
       "expiryDate": "2022-08-15",
       "userId": 23,
       "id": 1
+    },
+    {
+      "name": "Data Entry",
+      "userId": 23,
+      "id": 2
     }
   ],
   "profiles": [
     {
-      "name": "Subhan Uddin",
+      "name": "Subhan",
       "fName": "Salahuddin",
       "cnic": "15601-7843948-1",
       "email": "subhanuddinkhan@gmail.com",
@@ -113,6 +118,7 @@
       "ageRel": "No",
       "curOccupation": "PST (BPS - 12)",
       "highQualification": "Bachelor",
+      "password": "subhan",
       "id": 1
     }
   ]

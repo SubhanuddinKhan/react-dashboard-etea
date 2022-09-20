@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, Route, Routes, useNavigate  } from 'react-router-dom';
 
 
 import Home from './Home';
@@ -14,7 +14,10 @@ import Redirect from './Redirect';
 import ModalUpdateEdu from './ModalUpdateEdu';
 import Apply from './Apply';
 import Profile from './Profile';
+import Login from './Login';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Dashboard() {
@@ -48,6 +51,34 @@ function Dashboard() {
         main.classList.toggle('active');
 
     }
+
+    // Logout Function Start 
+    const auth = localStorage.getItem("user_sb");
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      const auth = localStorage.getItem('user_sb');
+      if (!auth){
+        navigate('/login');
+      }
+    }, []);
+
+    function logout() {
+      localStorage.clear();
+      navigate("/login");
+  
+      toast.success('Logged Out Successfully!', {
+        position: "top-right",
+        autoClose: 4000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
+    }
+
+    // Logout End 
  
   return (
     <>
@@ -99,10 +130,11 @@ function Dashboard() {
         </Link>
       </li>
       <li>
-        <a href>
+        <Link onClick={logout} to="/login">
           <span className="icon"><ion-icon name="log-out-outline" /></span>
           <span className="title">Signout</span>
-        </a>
+        </Link>
+      
       </li>
     </ul>
   </div>
@@ -131,17 +163,17 @@ function Dashboard() {
     
         
       <Routes>
-        <Route exact path="/" element={<Homer />} />
-        <Route exact path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/home" element={<Home />} /> */}
 
-        <Route exact path="/view/:id" element={<View />} />
-        <Route exact path="/update/:id" element={<UpdateUser />} />
-        <Route exact path="/Register" element={<Register />} />
-        <Route exact path="/users" element={<UsersList />} />
-        <Route exact path="/education" element={<Education />} />
-        <Route exact path="/experience" element={<Experience />} />
-        <Route exact path="/apply" element={<Apply />} />
-        <Route exact path="/profile" element={<Profile />} />
+        <Route path="/view/:id" element={<View />} />
+        <Route path="/update/:id" element={<UpdateUser />} />
+        <Route path="/Register" element={<Register />} />
+        <Route path="/users" element={<UsersList />} />
+        <Route path="/education" element={<Education />} />
+        <Route path="/experience" element={<Experience />} />
+        <Route path="/apply" element={<Apply />} />
+        <Route path="/profile" element={<Profile />} />
         </Routes>
 
       </div>

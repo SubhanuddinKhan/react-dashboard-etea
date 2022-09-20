@@ -372,6 +372,48 @@ body{
     color: var(--blue);
 }
 
+.card_bHeaderh {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+#btn__viewAll{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.card_bHeaderh h2 {
+    font-weight: 600;
+    color: var(--blue);
+}
+
+#input-group-Htable-paid{
+    background-color: #8de02c;
+color: white;
+justify-content: center;
+}
+
+#input-group-Htable-pending{
+    background-color: #f9ca3f;
+color: white;
+justify-content: center;
+}
+
+#input-group-Htable-return{
+    background-color: #f00;
+color: white;
+justify-content: center;
+}
+
+#input-group-Htable-inprogress{
+    background-color: #1795ce;
+color: white;
+justify-content: center;
+}
+
+
 .btn{
     position: relative;
     padding: 5px 10px;
@@ -782,7 +824,13 @@ body{
 }
 
 
+#login__btn{
+    background-color: var(--blue);
+}
 
+#login__btn:hover{
+    background-color: #14b8a6;
+}
 
 
 

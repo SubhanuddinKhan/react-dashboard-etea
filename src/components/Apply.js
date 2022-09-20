@@ -268,7 +268,7 @@ function Apply() {
                       <td>Swat Board Jobs</td>
                       <td>{result_show.name}</td>
                       <td>
-                      <span class="input-group-text" id="basic-addon2">Applied</span>
+                      <span className="input-group-text" id="basic-addon2">Applied</span>
                       </td>
                     </tr>
                   );
