@@ -832,6 +832,23 @@ justify-content: center;
     background-color: #14b8a6;
 }
 
+#login__componentsBox {
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+
+    width: 687px;
+    margin: 0 auto;
+    /* padding: 72px 0px; */
+    padding-top: 0%;
+    padding-bottom: 6%;
+    margin-top: 2%;
+}
+
 
 
 /* Responsive Design */
@@ -859,9 +876,11 @@ justify-content: center;
         grid-template-columns: repeat(2,1fr);
     }
 
+
+
 }
 
-    @media (max-width: 768px) {
+    @media (min-width: 481px) and (max-width: 768px) {
         
     
 
@@ -877,6 +896,43 @@ justify-content: center;
     {
         white-space: nowrap;
     }
+
+    #login__componentsBox {
+        max-width: 95%;
+    }
+
+    .register__data{
+        max-width: 95%;
+    }
+
+    .register__form {
+        max-width: 100%;
+    }
+
+    #login_input{
+        max-width: 100%;
+        
+        margin: 0 auto;
+        margin-bottom: 14px;
+    }
+
+    #login__btn{
+       
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 14px;
+    }
+
+    .register__icon {
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .register__icon ion-icon{
+        font-size: 17.3em;
+        color: var(--blue);
+    }
+
 }
 
 
@@ -918,6 +974,47 @@ justify-content: center;
         right: initial;
         color: #fff;
 
+    }
+
+    .details_dashboard{
+        max-width: 64%;
+    }
+
+    #login__componentsBox {
+        max-width: 67%;
+    }
+
+    .register__data{
+        max-width: 64%;
+    }
+
+    .register__form {
+        max-width: 100%;
+    }
+
+    #login_input{
+        max-width: 100%;
+        
+        margin: 0 auto;
+        margin-bottom: 14px;
+    }
+
+    #login__btn{
+       
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 14px;
+    }
+
+    .register__icon {
+        margin: 0 auto;
+        text-align: center;
+        margin-left: 16%;
+    }
+    
+    .register__icon ion-icon{
+        font-size: 12.3em;
+        color: var(--blue);
     }
 
 

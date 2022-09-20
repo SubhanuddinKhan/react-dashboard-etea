@@ -76,7 +76,7 @@ function Login() {
     <div>
       {/* Body Box with Shadow  */}
       <div className="details_dashboard">
-        <div className="componentsBox">
+        <div id="login__componentsBox">
           <div className="register__icon">
             <ion-icon name="people-circle-outline" />
           </div>
@@ -85,6 +85,7 @@ function Login() {
             <div className="register__form">
               <input
                 type="text"
+                id="login_input"
                 className="form-control"
                 placeholder="Email"
                 value={email}
@@ -93,6 +94,7 @@ function Login() {
               />
               <input
                 type="password"
+                id="login_input"
                 className="form-control"
                 placeholder="Password"
                 required
