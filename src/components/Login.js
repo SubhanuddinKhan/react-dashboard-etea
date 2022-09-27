@@ -36,6 +36,7 @@ function Login() {
 
           localStorage.setItem("user_sb",result.data[0].email);
         navigate('/');
+       
 
             toast.success("User Loggedin Successfully ", {
               position: "top-right",

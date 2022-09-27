@@ -82,6 +82,7 @@ function Dashboard() {
  
   return (
     <>
+    {auth?
 <div className="container_b">
   <div className="navigation_b">
     <ul>
@@ -177,7 +178,7 @@ function Dashboard() {
         </Routes>
 
       </div>
-</div>
+</div>:<Login />}
 
     </>
   )

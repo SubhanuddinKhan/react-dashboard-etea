@@ -20,20 +20,21 @@ import 'react-toastify/dist/ReactToastify.css';
 import TestP from "./components/TestP";
 import Login from "./components/Login";
 import { useEffect } from "react";
+import Profile from "./components/Profile";
 
 
 
 function App() {
+  
+  const auth = localStorage.getItem("user_sb");
   // const navigate = useNavigate();
 
-  
-  // useEffect(()=>{
-  //   const auth = localStorage.getItem('user_sb');
-  //   if (auth){
-  //     navigate('/');
-  //   }
-    
-  // },[])
+  useEffect(() => {
+    const auth = localStorage.getItem('user_sb');
+    if (!auth){
+      // navigate('/login');
+    }
+  }, []);
 
   return (
     <>
@@ -41,13 +42,10 @@ function App() {
       
       <BrowserRouter>
       {/* <TestP /> */}
-      <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/" element={<Dashboard />} />
-     </Routes>
+    
 
-     {/* <Dashboard /> */}
-     
+<Dashboard />
+
       
     
     
