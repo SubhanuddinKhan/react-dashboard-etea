@@ -288,6 +288,7 @@ body{
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-gap: 30px;
+    /* grid-template-columns: repeat(1,1fr); */
     /* margin-top: 10px; */
 }
 
@@ -299,6 +300,7 @@ body{
     padding: 20px;
     box-shadow: 0 7px 25px rgba(0,0,0,0.08);
     border-radius: 20px;
+    overflow-x: auto;
 }
 
 .details_dashboard {
@@ -411,6 +413,7 @@ justify-content: center;
     background-color: #1795ce;
 color: white;
 justify-content: center;
+cursor: pointer;
 }
 
 
@@ -804,6 +807,7 @@ justify-content: center;
    border: none;
    border-bottom: 2px solid var(--blue);
    border-radius: 0px;
+   
 }
 
 
@@ -811,6 +815,7 @@ justify-content: center;
 
 .table__data__profile .row{
     min-height: 100px;
+    
 }
 
 .table__data__profile Button {
@@ -821,6 +826,7 @@ justify-content: center;
 .table__data__profile Button:hover {
     background-color: #3db166;
     font-weight: bold;
+    
 }
 
 
@@ -830,6 +836,17 @@ justify-content: center;
 
 #login__btn:hover{
     background-color: #14b8a6;
+}
+
+.login__details_dashboard {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-gap: 30px;
+    background-color: var(--grey);
+    /* margin-top: 10px; */
 }
 
 #login__componentsBox {
@@ -977,7 +994,7 @@ justify-content: center;
     }
 
     .details_dashboard{
-        max-width: 64%;
+        max-width: 100%;
     }
 
     #login__componentsBox {
@@ -1017,5 +1034,20 @@ justify-content: center;
         color: var(--blue);
     }
 
+    .table__data{
+        overflow-x: auto;
+    }
+
+    .modal__style .row {
+        margin-bottom: 14px;
+    }
+
+    #modal__col{
+        margin-bottom: 14px;
+    }
+
+    .modal-title{
+        margin: 0 auto;
+    }
 
 }

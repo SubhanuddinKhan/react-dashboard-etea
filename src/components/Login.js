@@ -76,7 +76,7 @@ function Login() {
   return (
     <div>
       {/* Body Box with Shadow  */}
-      <div className="details_dashboard">
+      <div className="login__details_dashboard">
         <div id="login__componentsBox">
           <div className="register__icon">
             <ion-icon name="people-circle-outline" />

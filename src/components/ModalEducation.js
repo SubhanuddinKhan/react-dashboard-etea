@@ -108,10 +108,10 @@ function ModalEducation(props) {
         <Modal.Body>
           <Container className="modal__style">
             <Row className="row">
-              <Col xs={4} md={3}>
+              <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                 Select Degree/Certificate
               </Col>
-              <Col xs={4} md={3}>
+              <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                 <Form.Select
                   value={degree}
                   onChange={(e) => setDegree(e.target.value)}
@@ -123,10 +123,10 @@ function ModalEducation(props) {
                   <option value="BS">BS</option>
                 </Form.Select>
               </Col>
-              <Col xs={4} md={3}>
+              <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                 <span>Degree/ Certificate Title</span>
               </Col>
-              <Col xs={4} md={3}>
+              <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                 <Form.Control
                   placeholder="Degree/Certificate Title"
                   aria-label="Degree/Certificate Title"
@@ -138,10 +138,10 @@ function ModalEducation(props) {
             </Row>
 
             <Row className="row">
-              <Col xs={4} md={3}>
+              <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                 Result Declaration Date
               </Col>
-              <Col xs={4} md={3}>
+              <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                 <div
                   id="date-picker-example"
                   class="md-form md-outline input-with-post-icon datepicker"
@@ -159,10 +159,10 @@ function ModalEducation(props) {
                   <i class="fas fa-calendar input-prefix"></i>
                 </div>
               </Col>
-              <Col xs={4} md={3}>
+              <Col xs={6} sm={6}md={3} id="modal__col">
                 Board / University
               </Col>
-              <Col xs={4} md={3}>
+              <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                 <Form.Control
                   placeholder="Board/University"
                   aria-label="Board/University"
@@ -174,10 +174,10 @@ function ModalEducation(props) {
             </Row>
 
             <Row className="row">
-              <Col xs={4} md={3}>
+              <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                 Obtained Marks/GPA
               </Col>
-              <Col xs={4} md={3}>
+              <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                 <Form.Control
                   placeholder="Marks/GPA"
                   aria-label="Marks/GPA"
@@ -186,10 +186,10 @@ function ModalEducation(props) {
                   onChange={(e) => setObtMarks(e.target.value)}
                 />
               </Col>
-              <Col xs={4} md={3}>
+              <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                 Total Marks/GPA
               </Col>
-              <Col xs={4} md={3}>
+              <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                 <Form.Control
                   placeholder="Total Marks/GPA"
                   aria-label="Total Marks/GPA"
@@ -201,10 +201,10 @@ function ModalEducation(props) {
             </Row>
 
             <Row className="row">
-              <Col xs={4} md={3}>
+              <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                 Select Grade
               </Col>
-              <Col xs={4} md={3}>
+              <Col xs={6} md={3} id="modal__col">
                 <Form.Select
                   value={grade}
                   onChange={(e) => setGrade(e.target.value)}

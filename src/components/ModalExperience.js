@@ -103,10 +103,10 @@ function ModalExperience(props) {
                 <Container className="modal__style">
                   <Row className="row">
 
-                  <Col xs={4} md={3}>
-                      Company
+                  <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
+                      Company:
                     </Col>
-                    <Col xs={4} md={3}>
+                    <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                       <div
                         id="company"
                         class="md-form md-outline input-with-post-icon datepicker"
@@ -127,10 +127,10 @@ function ModalExperience(props) {
                     </Col>
                     
                    
-                    <Col xs={4} md={3}>
+                    <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                       <span>Designation</span>
                     </Col>
-                    <Col xs={4} md={3}>
+                    <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                       <Form.Control
                         placeholder="Designation"
                         aria-label="Designation"
@@ -142,10 +142,10 @@ function ModalExperience(props) {
                   </Row>
 
                   <Row className="row">
-                    <Col xs={4} md={3}>
+                    <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                       Start Duration
                     </Col>
-                    <Col xs={4} md={3}>
+                    <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                       <div
                         id="date-picker-example"
                         class="md-form md-outline input-with-post-icon datepicker"
@@ -164,10 +164,10 @@ function ModalExperience(props) {
                         <i class="fas fa-calendar input-prefix"></i>
                       </div>
                     </Col>
-                    <Col xs={4} md={3}>
+                    <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                       End Duration
                     </Col>
-                    <Col xs={4} md={3}>
+                    <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                       <Form.Control
                         type="date"
                         placeholder="End Duration"
@@ -180,10 +180,10 @@ function ModalExperience(props) {
                   </Row>
 
                   <Row className="row">
-                  <Col xs={4} md={3}>
+                  <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                       Department
                     </Col>
-                    <Col xs={4} md={3}>
+                    <Col xs={6} sm={6} md={6} lg={3} id="modal__col">
                     <Form.Control
                         placeholder="Department"
                         aria-label="Department"
