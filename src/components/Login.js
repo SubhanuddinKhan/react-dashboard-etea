@@ -1,75 +1,63 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Login() {
- 
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [result, setResult] = useState("");
   const navigate = useNavigate();
 
-
   useEffect(() => {
-    const auth = localStorage.getItem('user_sb');
-    if (auth){
-      navigate('/');
+    const auth = localStorage.getItem("user_sb");
+    if (auth) {
+      navigate("/");
     }
   }, []);
 
   async function loginData() {
     try {
+      console.log(email, password);
 
-        console.log(email,password)
-
-      const result = await axios.get(`http://localhost:8000/profiles`);
-      console.log(result.data);
+      const result = await axios.get(`http://localhost:8000/users`);
+      // console.log(result.data);
       setResult(result.data);
 
-      if(result.data[0].email==email && result.data[0].password==password)
-      {
-          console.warn("success");
+      if (
+        result.data[0].email == email &&
+        result.data[0].password == password
+      ) {
+        console.warn("success");
 
-          localStorage.setItem("user_sb",result.data[0].email);
-        navigate('/');
-       
+        localStorage.setItem("user_sb", result.data[0].email);
+        navigate("/");
 
-            toast.success("User Loggedin Successfully ", {
-              position: "top-right",
-              autoClose: 4000,
-              hideProgressBar: true,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-            });
-          
-
-      }else{
-          console.warn("failed")
-          toast.error("Incorrect Username or Password ", {
-            position: "top-center",
-            autoClose: 4000,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          });
-          
-
+        toast.success("User Loggedin Successfully ", {
+          position: "top-right",
+          autoClose: 4000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      } else {
+        console.warn("failed");
+        toast.error("Incorrect Username or Password ", {
+          position: "top-center",
+          autoClose: 4000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
       }
-      
-
-    
-
     } catch (error) {
       console.log("something is wrong");
-
     }
   }
 
@@ -101,10 +89,9 @@ function Login() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                
               />
               <button
-              id="login__btn"
+                id="login__btn"
                 type="button"
                 className="btn btn-primary"
                 onClick={loginData}
@@ -122,9 +109,7 @@ function Login() {
                   );
                 })}
             </table> */}
-           
             </div>
-           
           </div>
         </div>
       </div>

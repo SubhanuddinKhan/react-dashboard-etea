@@ -1,7 +1,7 @@
 {
   "posts": [
     {
-      "name": "subhan kaka Update",
+      "name": "subhan kaka",
       "email": "subhanupdate@gmail.com",
       "id": 1
     },
@@ -9,6 +9,13 @@
       "name": "batman khan Kaka",
       "email": "batmankhan@gmail.com",
       "id": 5
+    }
+  ],
+  "users": [
+    {
+      "password": "subhan",
+      "email": "subhanuddinkhan@gmail.com",
+      "id": 1
     }
   ],
   "education_data": [
@@ -29,7 +36,7 @@
       "board": "UET Peshawar",
       "obtMarks": "3.77",
       "totalMarks": "4.00",
-      "grade": "A",
+      "grade": "B",
       "id": 4
     }
   ],
@@ -49,6 +56,14 @@
       "startDuration": "2022-08-01",
       "endDuration": "2022-08-15",
       "id": 2
+    },
+    {
+      "department": "CS",
+      "company": "Lepus Analytics",
+      "designation": "kjjk",
+      "startDuration": "2022-09-28",
+      "endDuration": "2022-10-07",
+      "id": 3
     }
   ],
   "posts_provider": [
@@ -61,12 +76,12 @@
   ],
   "posts_data": [
     {
-      "name": "Computer Operator",
+      "name": "computer operator",
       "post_pId": 23,
       "id": 1
     },
     {
-      "name": "Data Entry",
+      "name": "Data Entry Operator",
       "post_pId": 23,
       "id": 2
     },
@@ -76,27 +91,21 @@
       "id": 3
     },
     {
-      "name": "Stenotypist",
+      "name": "Senior Clerk",
       "post_pId": 24,
       "id": 4
     },
     {
-      "name": "Clerk",
+      "name": "Junior Clerk",
       "post_pId": 23,
       "id": 5
     }
   ],
   "posts_applied": [
     {
-      "name": "Computer Operator",
-      "expiryDate": "2022-08-15",
+      "name": "computer operator",
       "userId": 23,
       "id": 1
-    },
-    {
-      "name": "Data Entry",
-      "userId": 23,
-      "id": 2
     }
   ],
   "profiles": [

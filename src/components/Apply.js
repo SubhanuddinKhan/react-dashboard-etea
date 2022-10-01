@@ -205,12 +205,16 @@ function Apply() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 >
+                  <option>Select Post</option>
                   { result_update?.map((result_show, i) => {
                     console.log("body list ",id)
                      return (
                       //  console.log(result_show.pId)
                   result_show.post_pId==id?
+                  
+                  
                   <option key={i} value={result_show.name}>{result_show.name}</option>
+                  
                  :
                  ""
                   );

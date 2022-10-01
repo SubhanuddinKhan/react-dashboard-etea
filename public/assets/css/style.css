@@ -993,6 +993,10 @@ cursor: pointer;
 
     }
 
+    .details{
+         grid-template-columns: repeat(1,1fr);
+    }
+
     .details_dashboard{
         max-width: 100%;
     }
