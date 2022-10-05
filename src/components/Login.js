@@ -64,8 +64,8 @@ function Login() {
   return (
     <div>
       {/* Body Box with Shadow  */}
-      <div className="login__details_dashboard">
-        <div id="login__componentsBox">
+      <div className="details_login">
+        <div className="componentsBox">
           <div className="register__icon">
             <ion-icon name="people-circle-outline" />
           </div>
@@ -76,7 +76,7 @@ function Login() {
                 type="text"
                 id="login_input"
                 className="form-control"
-                placeholder="Email"
+                placeholder="subhanuddinkhan@gmail.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -85,7 +85,7 @@ function Login() {
                 type="password"
                 id="login_input"
                 className="form-control"
-                placeholder="Password"
+                placeholder="subhan"
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -98,6 +98,8 @@ function Login() {
               >
                 Log in
               </button>
+
+              
 
               {/* <table>
             {result?.map((result_show, i) => {

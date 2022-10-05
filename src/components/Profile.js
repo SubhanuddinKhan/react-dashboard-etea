@@ -159,7 +159,7 @@ function Profile() {
             <h2>Update Profile Record </h2>
             <hr />
             <Row className="row">
-              <Col xs={6} md={4}>
+              <Col xs={12} md={4}>
                 <label>Name </label>
               <Form.Control
                   placeholder="Name"
@@ -170,7 +170,7 @@ function Profile() {
                   
                 />
               </Col>
-              <Col xs={6} md={4}>
+              <Col xs={12} md={4}>
                 <label htmlFor="Father Name">Father Name</label>
               <Form.Control
                   placeholder="Father Name"
@@ -180,7 +180,7 @@ function Profile() {
                   onChange={(e) => setFName(e.target.value)}
                 />
               </Col>
-              <Col xs={6} md={4}>
+              <Col xs={12} md={4}>
                 <label htmlFor="CNIC">CNIC</label>
               <Form.Control
               
@@ -196,7 +196,7 @@ function Profile() {
             </Row>
 
             <Row className="row">
-            <Col xs={4} md={3}>
+            <Col xs={12} md={3}>
               <label htmlFor="Email">Email</label>
                 <Form.Control
                   placeholder="Email"
@@ -207,7 +207,7 @@ function Profile() {
                 />
               </Col>
 
-              <Col xs={6} md={4}>
+              <Col xs={12} md={4}>
                 <label htmlFor="Gender">Gender</label>
               <Form.Control
                   placeholder="Gender"
@@ -217,7 +217,7 @@ function Profile() {
                   onChange={(e) => setGender(e.target.value)}
                 />
               </Col>
-              <Col xs={6} md={4}>
+              <Col xs={12} md={4}>
                 <label htmlFor="Religious">Religious</label>
               <Form.Control
                   placeholder="Religious"
@@ -255,7 +255,7 @@ function Profile() {
             </Row>
 
             <Row className="row">
-            <Col xs={6} md={4}>
+            <Col xs={12} md={4}>
               <label htmlFor="Mobile Number">Mobile Number</label>
                 <Form.Control
                   placeholder="Mobile Number"
@@ -266,7 +266,7 @@ function Profile() {
                 />
               </Col>
              
-              <Col xs={6} md={4}>
+              <Col xs={12} md={4}>
                 <label htmlFor="Alternative Number">Alternative Number</label>
                 <Form.Control
                   placeholder="Alternative Number"
@@ -277,7 +277,7 @@ function Profile() {
                 />
               </Col>
 
-              <Col xs={6} md={4}>
+              <Col xs={12} md={4}>
                 <label htmlFor="DOB">DOB</label>
               <Form.Control
                   placeholder="DOB"
@@ -292,7 +292,7 @@ function Profile() {
             </Row>
 
             <Row>
-            <Col xs={6} md={4}>
+            <Col xs={12} md={4}>
               <label htmlFor="Domicile">Domicile</label>
             <Form.Control
                   placeholder="Domicile"
@@ -303,7 +303,7 @@ function Profile() {
                 />
               </Col>
               
-              <Col xs={6} md={4}>
+              <Col xs={12} md={4}>
                 <label>Zone</label>
               <Form.Control
                   placeholder="Zone"
@@ -314,7 +314,7 @@ function Profile() {
                 />
               </Col>
 
-              <Col xs={6} md={4}>
+              <Col xs={12} md={4}>
               <label htmlFor="Disability">Disability</label>
       <InputGroup className="mb-3">
         {/* <InputGroup.Text id="basic-addon3">
@@ -329,7 +329,7 @@ function Profile() {
             </Row>
 
             <Row>
-                <Col xs={6} md={4}>
+                <Col xs={12} md={4}>
                 <Form.Label htmlFor="basic-url">Do you claim age relaxation ?</Form.Label>
       <InputGroup className="mb-3">
         {/* <InputGroup.Text id="basic-addon3">
@@ -342,7 +342,7 @@ function Profile() {
       </InputGroup>
                 </Col>
 
-                <Col xs={6} md={4}>
+                <Col xs={12} md={4}>
                 <Form.Label htmlFor="basic-url">What is your current occupation ?</Form.Label>
       <InputGroup className="mb-3">
         {/* <InputGroup.Text id="basic-addon3">
@@ -355,7 +355,7 @@ function Profile() {
       </InputGroup>
                 </Col>
 
-                <Col xs={6} md={4}>
+                <Col xs={12} md={4}>
                 <Form.Label htmlFor="basic-url">Your Highest Qualification ?</Form.Label>
       <InputGroup className="mb-3">
         {/* <InputGroup.Text id="basic-addon3">
