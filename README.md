@@ -1,3 +1,61 @@
+# Screenshots
+Fully Functional React Application Clone ETEA Job Application Portal with New Astonishing Interface
+
+# Responsiveness
+
+![dashboard](https://user-images.githubusercontent.com/45516016/204127406-99631ac6-1696-4496-855c-ee9b5bd9c6ba.PNG)
+
+![screenshot-subhan-react-dashboard netlify app-2022 11 23-20_00_04](https://user-images.githubusercontent.com/45516016/204127441-8303c155-ac3b-497f-b8c9-941a02670bb4.png)
+
+
+![FireShot Capture 003 - React App - subhan-react-dashboard netlify app](https://user-images.githubusercontent.com/45516016/204127459-e039589d-efec-4cba-9778-145c38ec4a07.png) ![projects](https://user-images.githubusercontent.com/45516016/204127849-72ff9084-32a6-41cf-9cc9-72adc10fbf72.JPG) ![FireShot Capture 014 - React App - subhan-react-dashboard netlify app](https://user-images.githubusercontent.com/45516016/204127522-8bba4b81-13e0-42d3-9929-a14ae7f5b257.png) 
+
+# Features
+## Sidebar Menu Compress Feature
+
+![sidebar menu compressed](https://user-images.githubusercontent.com/45516016/204127989-3486369c-3064-448f-b6d6-7765834fea58.png)
+
+## Toasts Feature
+
+![toast](https://user-images.githubusercontent.com/45516016/204128254-c3087303-b2ac-449e-9e66-b3cb662b7026.png)
+
+## Modal Features
+
+![Modal Education](https://user-images.githubusercontent.com/45516016/204128363-b417df21-4ff5-4520-bb10-4852368b97fc.png)
+
+
+### Profile Page
+
+![profile page](https://user-images.githubusercontent.com/45516016/204128155-ed281bab-6868-4b56-9fc3-6ce08c306736.png)
+
+### Education
+
+![Education](https://user-images.githubusercontent.com/45516016/204128417-d57bbc98-61b3-4151-a2cb-4eb579c6e18e.png)
+
+### `Add Education`
+![Modal Education](https://user-images.githubusercontent.com/45516016/204128431-9e373c30-a5a7-4e43-a4d5-cd6aa3175420.png)
+
+### Experience Page
+
+![Experience](https://user-images.githubusercontent.com/45516016/204128508-d710f266-4f3a-486e-b03c-1debc07285d5.png)
+
+### `Add Experience`
+
+![add experience Modal](https://user-images.githubusercontent.com/45516016/204128523-0aaa7af4-e368-476d-8c29-514114629c8a.png)
+
+### Jobs Page 
+
+![posts page](https://user-images.githubusercontent.com/45516016/204128633-46c125d7-f8f8-490c-a8f5-dfdf0261b926.png)
+
+### `Post Apply`
+
+![posts apply](https://user-images.githubusercontent.com/45516016/204128654-d2362fd6-da36-4966-9a40-5c6eff74283f.jpg)
+
+### Login Screen
+
+![Login Page](https://user-images.githubusercontent.com/45516016/204128747-9457aa16-dec8-4de4-ad4d-c5dbf232fda5.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
